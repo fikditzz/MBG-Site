@@ -1,0 +1,44 @@
+/* style.css */
+
+/* Smooth scrolling untuk link jangkar (anchor link) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Kunci scroll saat intro berjalan */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* --- KELAS UNTUK ANIMASI SCROLL (REVEAL) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi muncul dari kiri ke kanan */
+.reveal.slide-right {
+    transform: translateX(-50px);
+}
+.reveal.slide-right.active {
+    transform: translateX(0);
+}
+
+/* Delay animasi agar tidak muncul bersamaan */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-700 { transition-delay: 700ms; }
+
+/* Transisi keluarnya Intro Screen */
+.intro-exit {
+    transform: translateY(-100%);
+}

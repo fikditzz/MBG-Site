@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBG Kita - Badan Gizi Nasional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Link ke file CSS kustom -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white font-sans text-gray-800 overflow-x-hidden no-scroll">
+
+    <!-- Intro Animasi (Splash Screen) -->
+    <div id="intro-screen" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-blue-700 text-white transition-transform duration-700 ease-in-out">
+        <div id="intro-content" class="flex flex-col items-center gap-4 opacity-0 scale-50 transition-all duration-1000">
+            <!-- Logo Garuda Pancasila di Intro -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Garuda_Pancasila%2C_Coat_of_Arms_of_Indonesia.svg/960px-Garuda_Pancasila%2C_Coat_of_Arms_of_Indonesia.svg.png" 
+                 alt="Logo Garuda Pancasila" 
+                 class="h-32 w-auto drop-shadow-2xl">
+            <h1 class="text-4xl font-bold tracking-tight text-center mt-2">Badan Gizi Nasional</h1>
+        </div>
+        <p id="intro-text" class="mt-4 text-blue-200 text-lg opacity-0 translate-y-4 transition-all duration-1000 delay-300">
+            Mewujudkan Generasi Emas 2045
+        </p>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Logo Garuda Pancasila di Navbar -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Garuda_Pancasila%2C_Coat_of_Arms_of_Indonesia.svg/960px-Garuda_Pancasila%2C_Coat_of_Arms_of_Indonesia.svg.png" 
+                     alt="Logo Garuda Pancasila" 
+                     class="h-10 w-auto transition-transform hover:scale-105">
+                <span id="nav-logo" class="font-bold text-xl text-white drop-shadow-md transition-colors">MBG Kita</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#beranda" class="nav-link font-medium text-white drop-shadow-md hover:text-blue-400 transition-colors">Beranda</a>
+                <a href="#tentang" class="nav-link font-medium text-white drop-shadow-md hover:text-blue-400 transition-colors">Tentang</a>
+                <a href="#statistik" class="nav-link font-medium text-white drop-shadow-md hover:text-blue-400 transition-colors">Statistik</a>
+                <a href="#sasaran" class="nav-link font-medium text-white drop-shadow-md hover:text-blue-400 transition-colors">Sasaran</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium transition-transform hover:scale-105 shadow-lg">
+                    Hubungi Kami
+                </button>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-white drop-shadow-md">
+                <i class="ph ph-list text-3xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 flex-col items-center gap-4 border-t">
+            <a href="#beranda" class="text-gray-700 font-medium w-full text-center py-2">Beranda</a>
+            <a href="#tentang" class="text-gray-700 font-medium w-full text-center py-2">Tentang</a>
+            <a href="#statistik" class="text-gray-700 font-medium w-full text-center py-2">Statistik</a>
+            <a href="#sasaran" class="text-gray-700 font-medium w-full text-center py-2">Sasaran</a>
+            <button class="bg-blue-600 text-white px-8 py-2 rounded-full font-medium mt-2">Hubungi Kami</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative h-[90vh] min-h-[600px] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <!-- Tempatkan fotomu di baris bawah ini nanti -->
+            <img src="https://cdn.setneg.go.id/_multimedia/photo/20250219/2521IMG-20250219-WA0014.jpg" alt="Anak Sekolah" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/60 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full pt-20">
+            <div class="max-w-2xl">
+                <span class="reveal delay-100 inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-sm font-medium mb-6">
+                    Badan Gizi Nasional
+                </span>
+                <h1 class="reveal delay-300 text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+                    Nutrisi Hari Ini,<br />Prestasi Esok Hari.
+                </h1>
+                <p class="reveal delay-500 text-lg md:text-xl text-blue-50 leading-relaxed max-w-xl">
+                    Mewujudkan Generasi Emas melalui akses makanan bergizi untuk anak sekolah, ibu hamil, dan balita di seluruh penjuru Indonesia.
+                </p>
+                <div class="reveal delay-700 mt-10 flex gap-4">
+                    <button class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3.5 rounded-full font-semibold shadow-lg hover:shadow-blue-500/30 transition-all hover:-translate-y-1">
+                        Mulai Jelajahi
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-24 relative bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal slide-right relative rounded-3xl overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-blue-600/10 mix-blend-multiply"></div>
+                <!-- Gambar makanan bergizi, bisa diganti fotomu -->
+                <img src="https://ugm.ac.id/wp-content/uploads/2026/01/MBG-Radar-Jogja.jpg" alt="Makanan Bergizi" class="w-full h-[600px] object-cover">
+                <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm p-4 rounded-2xl shadow-xl flex items-center gap-4">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                        <i class="ph ph-leaf text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 font-medium">Bahan Makanan</p>
+                        <p class="text-lg font-bold text-gray-900">100% Segar & Lokal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="reveal">
+                    <span class="inline-block py-1.5 px-4 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6">Tentang Program</span>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">Apa Itu Makan Bergizi Gratis?</h2>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Makan Bergizi Gratis (MBG) adalah program unggulan pemerintah Indonesia yang dikelola oleh <strong>Badan Gizi Nasional</strong>. Program ini bertujuan untuk memberikan asupan makan siang bergizi secara cuma-cuma kepada anak sekolah, balita, serta ibu hamil dan menyusui.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-8">
+                    <div class="reveal delay-200 flex gap-4">
+                        <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center"><i class="ph ph-shield-check text-xl"></i></div>
+                        <div><h4 class="font-bold text-gray-900 mb-1">Ketahanan Pangan</h4><p class="text-sm text-gray-600">Menjamin ketersediaan pangan berkualitas.</p></div>
+                    </div>
+                    <div class="reveal delay-300 flex gap-4">
+                        <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center"><i class="ph ph-brain text-xl"></i></div>
+                        <div><h4 class="font-bold text-gray-900 mb-1">Kecerdasan Kognitif</h4><p class="text-sm text-gray-600">Meningkatkan konsentrasi dan belajar.</p></div>
+                    </div>
+                    <div class="reveal delay-400 flex gap-4">
+                        <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center"><i class="ph ph-leaf text-xl"></i></div>
+                        <div><h4 class="font-bold text-gray-900 mb-1">Bahan Lokal</h4><p class="text-sm text-gray-600">Memberdayakan hasil tani masyarakat.</p></div>
+                    </div>
+                    <div class="reveal delay-500 flex gap-4">
+                        <div class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center"><i class="ph ph-medal text-xl"></i></div>
+                        <div><h4 class="font-bold text-gray-900 mb-1">Standar Nasional</h4><p class="text-sm text-gray-600">Disusun oleh ahli gizi berpengalaman.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistik Section -->
+    <section id="statistik" class="py-24 bg-slate-50/80 border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="reveal text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Statistik Capaian & Target</h2>
+                <p class="text-lg text-gray-600">Komitmen kami menjangkau seluruh pelosok negeri.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="reveal delay-100 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i class="ph ph-users text-3xl"></i></div>
+                    <h3 class="text-4xl font-black text-blue-600 mb-2">82.9 Juta</h3>
+                    <p class="text-gray-500 font-medium">Total Penerima Manfaat</p>
+                </div>
+                <div class="reveal delay-200 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i class="ph ph-buildings text-3xl"></i></div>
+                    <h3 class="text-4xl font-black text-emerald-600 mb-2">500K+</h3>
+                    <p class="text-gray-500 font-medium">Sekolah Penerima</p>
+                </div>
+                <div class="reveal delay-300 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i class="ph ph-cooking-pot text-3xl"></i></div>
+                    <h3 class="text-4xl font-black text-orange-600 mb-2">2500+</h3>
+                    <p class="text-gray-500 font-medium">Dapur Satuan Pelayanan</p>
+                </div>
+                <div class="reveal delay-400 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"><i class="ph ph-heartbeat text-3xl"></i></div>
+                    <h3 class="text-4xl font-black text-rose-600 mb-2">100%</h3>
+                    <p class="text-gray-500 font-medium">Nutrisi Standar WHO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button (Tanya Lapor) -->
+    <div class="fixed bottom-8 right-8 z-40 flex flex-col items-end gap-3">
+        <button class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3.5 rounded-full shadow-xl flex items-center gap-3 font-medium transition-transform hover:-translate-y-1">
+            <i class="ph ph-chat-circle-dots text-xl"></i> Tanya / Lapor
+        </button>
+    </div>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
